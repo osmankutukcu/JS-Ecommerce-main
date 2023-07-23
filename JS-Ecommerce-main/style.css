@@ -1,0 +1,264 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  /**/
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background: linear-gradient(to right, #4e4376, #2b5876);
+  color: white;
+  box-shadow: 2px 2px 20px #4e4376;
+}
+/* Tüm öğelerin iç ve dış boşluklarını sıfırlar ve kutu modelini border-box olarak ayarlar */
+
+header input {
+  padding: 7px 20px;
+  border-radius: 10px;
+}
+/* Başlık içindeki giriş alanının boşluk ve kenar yarıçapını belirler */
+
+header div {
+  display: flex;
+  gap: 10px;
+}
+/* Başlık içindeki düğme grubunu yatay olarak hizalar ve aralarına boşluk ekler */
+
+header div button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-weight: 600;
+  cursor: pointer;
+  color: white;
+}
+/* Başlık içindeki düğmelerin iç ve dış boşluklarını, kenar yarıçapını, yazı kalınlığını, imleç tipini ve metin rengini ayarlar */
+
+header div button:nth-child(1) {
+  background: black;
+}
+/* Başlık içindeki ilk düğmenin arka plan rengini siyah olarak belirler */
+
+header div button:nth-child(2) {
+  background: blue;
+}
+/* Başlık içindeki ikinci düğmenin arka plan rengini mavi olarak belirler */
+
+header div button:nth-child(3) {
+  background: red;
+}
+/* Başlık içindeki üçüncü düğmenin arka plan rengini kırmızı olarak belirler */
+
+main {
+  margin-top: 50px;
+}
+/* Ana içeriği temsil eden öğenin herhangi bir özelliğini belirtmez */
+
+section {
+  padding: 50px;
+}
+/* Bölüm öğelerinin iç boşluğunu belirler */
+
+/* Kategoriler */
+
+.categories {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+  margin-top: 40px;
+}
+/* Kategori öğelerini yatay olarak hizalar, aralarına boşluk ekler ve üst boşluk verir */
+
+.category {
+  max-width: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+/* Kategori öğelerinin maksimum genişliğini belirler ve dikey olarak hizalar */
+
+.category img {
+  width: 100%;
+  height: 50%;
+  border-radius: 10px;
+}
+/* Kategori resminin genişliğini %100 yapar ve kenar yarıçapını belirler */
+
+.category span {
+  position: absolute;
+  bottom: 10px;
+  background: white;
+  width: 70%;
+  text-align: center;
+  padding: 10px;
+  border-radius: 10px;
+  font-weight: 600;
+  box-shadow: 2px 2px 10px black;
+}
+/* Kategori adının altına mutlak bir pozisyonla yerleştirir, arka plan rengi, genişliği, metin hizalaması, iç ve dış boşlukları, kenar yarıçapı, yazı kalınlığı ve gölgelendirmeyi belirler */
+
+/* Ürünler */
+
+.products {
+  margin-top: 40px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 50px;
+  justify-content: space-around;
+}
+/* Ürünlerin üst boşluğunu belirler, ürünleri yatay olarak sarar, aralarına boşluk ekler ve ortaya hizalar */
+
+.product {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 250px;
+  padding: 10px;
+  border-radius: 10px;
+  gap: 10px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em,
+    rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em,
+    rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset;
+}
+/* Ürünleri dikey olarak hizalar, maksimum genişliklerini belirler, iç ve dış boşlukları, kenar yarıçapı ve gölgelendirmeyi belirler */
+
+.product img {
+  width: 100%;
+  border-radius: 10px;
+}
+/* Ürün resminin genişliğini %100 yapar ve kenar yarıçapını belirler */
+
+.product-info {
+  background: black;
+  width: 100%;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px;
+  border-radius: 10px;
+}
+
+.product-info p {
+  color: greenyellow;
+}
+
+.product-info button {
+  padding: 5px;
+  font-weight: 700;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  color: white;
+  background-image: linear-gradient(45deg, #21d4fd 0%, #b721ff 100%);
+}
+
+.product-info button:hover {
+  transform: scale(0.9);
+  box-shadow: 2px 2px 20px white;
+}
+/* Ürün bilgisi alanının arka plan rengini, genişliğini, metin rengini, iç ve dış boşlukları, kenar yarıçapını ve üzerine gelindiğindeki stilini belirler */
+
+/* Modal */
+
+.modal-wrapper {
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  background: rgba(128, 128, 128, 0.267);
+  top: 0;
+  left: 0;
+  display: none;
+  place-items: center;
+  z-index: 1000;
+}
+
+.active {
+  display: grid;
+}
+
+.modal-inner {
+  background: white;
+  width: 70%;
+  height: 60%;
+  border-radius: 10px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.modal-inner .icon {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.modal-inner img {
+  width: 50px;
+  cursor: pointer;
+}
+
+.modal-inner img:hover {
+  transform: scale(0.9);
+}
+/* Modal arkaplanını, genişliğini, yüksekliğini, kenar yarıçapını, iç boşluklarını ve düğme resminin stilini belirler */
+
+/* Liste içerisindeki öğeler */
+
+.list {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 10px;
+  overflow: auto;
+}
+/* Liste öğelerini dikey olarak hizalar, aralarına boşluk ekler, iç boşluklarını belirler ve aşırı taşmayı ayarlar */
+
+.list-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  border-radius: 10px;
+  align-items: center;
+  font-size: 12px;
+  box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px,
+    rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
+}
+
+.list-item img {
+  border-radius: 50%;
+}
+
+.list-item button {
+  border: 1px solid red;
+  padding: 3px 15px;
+  background: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.list-item button:hover {
+  background: red;
+  color: white;
+}
+/* Liste öğelerini yatay olarak hizalar, iç ve dış boşluklarını, kenar yarıçapını ve üzerine gelindiğindeki stilini belirler */
+
+/*---*/
+@media screen and (max-width: 768px) {
+  .categories {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+/*----*/
